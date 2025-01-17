@@ -1,0 +1,35 @@
+public class IEjemploMatricesSumar {
+    public static void main(String[] args) {
+
+        //quiero sumar las matrices a y b.
+        //para operaciones aritmeticas la idea es que ambas matrices tengan la misma cantidad de filas y columnas, que sean cuadradas
+
+        int[][] a = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        int[][] b = {
+                {10, 20, 30},
+                {40, 50, 60},
+                {70, 80, 90}
+        };
+
+        int[][] suma = new int[3][3];
+
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                suma[i][j] = a[i][j] + b[i][j];
+            }
+        }
+
+        System.out.println("La suma de a y b: ");
+        for (int i = 0; i < suma.length; i++) {
+            for (int j = 0; j < suma[i].length; j++) {
+                System.out.print(suma[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
